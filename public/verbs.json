@@ -1,0 +1,847 @@
+{
+    "groups": [{
+        "name": "no vowel change, V2=V3, d ending changes to t, ent changes to end",
+        "verbs": [
+            {
+                "v1": "bend",
+                "v2": ["bent"],
+                "v3": ["bent"]
+            },
+            {
+                "v1": "build",
+                "v2": ["built"],
+                "v3": ["built"]
+            },
+            {
+                "v1": "lend",
+                "v2": ["lent"],
+                "v3": ["lent"]
+            },
+            {
+                "v1": "send",
+                "v2": ["sent"],
+                "v3": ["sent"]
+            },
+            {
+                "v1": "spend",
+                "v2": ["spent"],
+                "v3": ["spend"]
+            }
+        ]
+    },
+    {
+        "name": "no vowel change, V2=V3, regular (V2, V3) in US English, irregular in UK English",
+        "verbs": [
+            {
+                "v1": "learn",
+                "v2": ["learned", "learnt"],
+                "v3": ["learned", "learnt"]
+            },
+            {
+                "v1": "burn",
+                "v2": ["burned", "burnt"],
+                "v3": ["burned", "burnt"]
+            },
+            {
+                "v1": "dwell",
+                "v2": ["dwelled", "dwelt"],
+                "v3": ["dwelled", "dwelt"]
+            },
+            {
+                "v1": "smell",
+                "v2": ["smelled", "smelt"],
+                "v3": ["smelled", "smelt"]
+            },
+            {
+                "v1": "spell",
+                "v2": ["spelled", "spelt"],
+                "v3": ["spelled", "spelt"]
+            },
+            {
+                "v1": "spill",
+                "v2": ["spilled", "spilt"],
+                "v3": ["spilled", "spilt"]
+            },
+            {
+                "v1": "spoil",
+                "v2": ["spoiled", "spoilt"],
+                "v3": ["spoiled", "spoilt"]
+            }
+        ]
+    },
+    {
+        "name": "no vowel change, V2=V3, ay ending changes to aid",
+        "verbs": [
+            {
+                "v1": "lay",
+                "v2": ["laid"],
+                "v3": ["laid"]
+            },
+            {
+                "v1": "pay",
+                "v2": ["paid"],
+                "v3": ["paid"]
+            },
+            {
+                "v1": "say",
+                "v2": ["said"],
+                "v3": ["said"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, irregular ending, V2=V3, d or t ending",
+        "verbs": [
+            {
+                "v1": "creep",
+                "v2": ["crept"],
+                "v3": ["crept"]
+            },
+            {
+                "v1": "feed",
+                "v2": ["fed"],
+                "v3": ["fed"]
+            },
+            {
+                "v1": "feel",
+                "v2": ["felt"],
+                "v3": ["felt"]
+            },
+            {
+                "v1": "keep",
+                "v2": ["kept"],
+                "v3": ["kept"]
+            },
+            {
+                "v1": "kneel",
+                "v2": ["knelt", "kneeled"],
+                "v3": ["knelt", "kneeled"]
+            },
+            {
+                "v1": "meet",
+                "v2": ["met"],
+                "v3": ["met"]
+            },
+            {
+                "v1": "sleep",
+                "v2": ["slept"],
+                "v3": ["slept"]
+            },
+            {
+                "v1": "sweep",
+                "v2": ["swept"],
+                "v3": ["swept"]
+            },
+            {
+                "v1": "weep",
+                "v2": ["wept"],
+                "v3": ["wept"]
+            },
+            {
+                "v1": "leave",
+                "v2": ["left"],
+                "v3": ["left"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, irregular ending, V2=V3, different pronunciation of the same vowel, d or t ending",
+        "verbs": [
+            {
+                "v1": "deal",
+                "v2": ["dealt"],
+                "v3": ["dealt"]
+            },
+            {
+                "v1": "dream",
+                "v2": ["dreamed", "dreamt"],
+                "v3": ["dreamed", "dreamt"]
+            },
+            {
+                "v1": "lean",
+                "v2": ["leaned", "leant"],
+                "v3": ["leaned", "leant"]
+            },
+            {
+                "v1": "leap",
+                "v2": ["leapt"],
+                "v3": ["leapt"]
+            },
+            {
+                "v1": "mean",
+                "v2": ["meant"],
+                "v3": ["meant"]
+            },
+            {
+                "v1": "read",
+                "v2": ["read"],
+                "v3": ["read"]
+            },
+            {
+                "v1": "hear",
+                "v2": ["heard"],
+                "v3": ["heard"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, irregular ending, V2=V3, ell turns to old",
+        "verbs": [
+            {
+                "v1": "sell",
+                "v2": ["sold"],
+                "v3": ["sold"]
+            },
+            {
+                "v1": "tell",
+                "v2": ["told"],
+                "v3": ["told"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, irregular ending, V2=V3, vowel change with ought (or *aught) ending",
+        "verbs": [
+            {
+                "v1": "bring",
+                "v2": ["brought"],
+                "v3": ["brought"]
+            },
+            {
+                "v1": "buy",
+                "v2": ["bought"],
+                "v3": ["bought"]
+            },
+            {
+                "v1": "fight",
+                "v2": ["fought"],
+                "v3": ["fought"]
+            },
+            {
+                "v1": "seek",
+                "v2": ["sought"],
+                "v3": ["sought"]
+            },
+            {
+                "v1": "think",
+                "v2": ["thought"],
+                "v3": ["thought"]
+            },
+            {
+                "v1": "catch",
+                "v2": ["caught"],
+                "v3": ["caught"]
+            },
+            {
+                "v1": "teach",
+                "v2": ["taught"],
+                "v3": ["taught"]
+            }
+        ]
+    },
+    {
+        "name": "verbs with the same form V1=V2=V3",
+        "verbs": [
+            {
+                "v1": "bet",
+                "v2": ["bet"],
+                "v3": ["bet"]
+            },
+            {
+                "v1": "bid",
+                "v2": ["bid"],
+                "v3": ["bid"]
+            },
+            {
+                "v1": "broadcast",
+                "v2": ["broadcast", "broadcasted"],
+                "v3": ["bid"]
+            },
+            {
+                "v1": "burst",
+                "v2": ["burst"],
+                "v3": ["burst"]
+            },
+            {
+                "v1": "cost",
+                "v2": ["cost"],
+                "v3": ["cost"]
+            },
+            {
+                "v1": "cut",
+                "v2": ["cut"],
+                "v3": ["cut"]
+            },
+            {
+                "v1": "fit",
+                "v2": ["fit", "fitted"],
+                "v3": ["fit", "fitted"]
+            },
+            {
+                "v1": "hit",
+                "v2": ["hit"],
+                "v3": ["hit"]
+            },
+            {
+                "v1": "hurt",
+                "v2": ["hurt"],
+                "v3": ["hurt"]
+            },
+            {
+                "v1": "let",
+                "v2": ["let"],
+                "v3": ["let"]
+            },
+            {
+                "v1": "put",
+                "v2": ["put"],
+                "v3": ["put"]
+            },
+            {
+                "v1": "set",
+                "v2": ["set"],
+                "v3": ["set"]
+            },
+            {
+                "v1": "shut",
+                "v2": ["shut"],
+                "v3": ["shut"]
+            },
+            {
+                "v1": "spread",
+                "v2": ["spread"],
+                "v3": ["spread"]
+            },
+            {
+                "v1": "quit",
+                "v2": ["quit"],
+                "v3": ["quit"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, V3 ending with (e)n, V2 and V3 with long o sound",
+        "verbs": [
+            {
+                "v1": "break",
+                "v2": ["broke"],
+                "v3": ["broken"]
+            },
+            {
+                "v1": "choose",
+                "v2": ["chose"],
+                "v3": ["chosen"]
+            },
+            {
+                "v1": "freeze",
+                "v2": ["froze"],
+                "v3": ["frozen"]
+            },
+            {
+                "v1": "speak",
+                "v2": ["spoke"],
+                "v3": ["spoken"]
+            },
+            {
+                "v1": "steal",
+                "v2": ["stole"],
+                "v3": ["stolen"]
+            },
+            {
+                "v1": "awake",
+                "v2": ["awoke", "awaked"],
+                "v3": ["awoken", "awaked"]
+            },
+            {
+                "v1": "wake",
+                "v2": ["woke", "waked"],
+                "v3": ["woken", "waked"]
+            },
+            {
+                "v1": "weave",
+                "v2": ["wove"],
+                "v3": ["woven"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, V3 ending with (e)n, V2 long o sound, V3 shirt /i/ sound",
+        "verbs": [
+            {
+                "v1": "arise",
+                "v2": ["arose"],
+                "v3": ["arisen"]
+            },
+            {
+                "v1": "rise",
+                "v2": ["rose"],
+                "v3": ["risen"]
+            },
+            {
+                "v1": "ride",
+                "v2": ["rode"],
+                "v3": ["ridden"]
+            },
+            {
+                "v1": "drive",
+                "v2": ["drove"],
+                "v3": ["driven"]
+            },
+            {
+                "v1": "write",
+                "v2": ["wrote"],
+                "v3": ["written"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, V3 ending with (e)n",
+        "verbs": [
+            {
+                "v1": "bite",
+                "v2": ["bit"],
+                "v3": ["bitten"]
+            },
+            {
+                "v1": "hide",
+                "v2": ["hid"],
+                "v3": ["hidden"]
+            },
+            {
+                "v1": "eat",
+                "v2": ["ate"],
+                "v3": ["eaten"]
+            },
+            {
+                "v1": "give",
+                "v2": ["gave"],
+                "v3": ["given"]
+            },
+            {
+                "v1": "forgive",
+                "v2": ["forgave"],
+                "v3": ["forgiven"]
+            },
+            {
+                "v1": "forbid",
+                "v2": ["forbad(e)"],
+                "v3": ["forbidden"]
+            },
+            {
+                "v1": "bid",
+                "v2": ["bade"],
+                "v3": ["bidden"]
+            },
+            {
+                "v1": "forget",
+                "v2": ["forgot"],
+                "v3": ["forgotten"]
+            },
+            {
+                "v1": "get",
+                "v2": ["got"],
+                "v3": ["gotten", "got"]
+            },
+            {
+                "v1": "shake",
+                "v2": ["shook"],
+                "v3": ["shaken"]
+            },
+            {
+                "v1": "take",
+                "v2": ["took"],
+                "v3": ["taken"]
+            },
+            {
+                "v1": "see",
+                "v2": ["saw"],
+                "v3": ["seen"]
+            },
+            {
+                "v1": "beat",
+                "v2": ["beat"],
+                "v3": ["beaten"]
+            },
+            {
+                "v1": "fall",
+                "v2": ["fell"],
+                "v3": ["fallen"]
+            },
+            {
+                "v1": "lie",
+                "v2": ["lay"],
+                "v3": ["lain"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, V3 ending with (e)n, the ear-ore-orn pattern",
+        "verbs": [
+            {
+                "v1": "bear",
+                "v2": ["bore"],
+                "v3": ["born"]
+            },
+            {
+                "v1": "swear",
+                "v2": ["swore"],
+                "v3": ["sworn"]
+            },
+            {
+                "v1": "tear",
+                "v2": ["tore"],
+                "v3": ["torn"]
+            },
+            {
+                "v1": "wear",
+                "v2": ["wore"],
+                "v3": ["worn"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, V3 ending with (e)n, V1 with ow, V2 with ew, V3 with own",
+        "verbs": [
+            {
+                "v1": "blow",
+                "v2": ["blew"],
+                "v3": ["blown"]
+            },
+            {
+                "v1": "grow",
+                "v2": ["grew"],
+                "v3": ["grown"]
+            },
+            {
+                "v1": "know",
+                "v2": ["knew"],
+                "v3": ["known"]
+            },
+            {
+                "v1": "throw",
+                "v2": ["threw"],
+                "v3": ["thrown"]
+            },
+            {
+                "v1": "fly",
+                "v2": ["flew"],
+                "v3": ["flown"]
+            },
+            {
+                "v1": "draw",
+                "v2": ["drew"],
+                "v3": ["drawn"]
+            }
+        ]
+    },
+    {
+        "name": "regular V2, regular or irregular V3",
+        "verbs": [
+            {
+                "v1": "show",
+                "v2": ["showed"],
+                "v3": ["showed", "shown"]
+            },
+            {
+                "v1": "sow",
+                "v2": ["sowed"],
+                "v3": ["sowed", "sown"]
+            },
+            {
+                "v1": "mow",
+                "v2": ["mowed"],
+                "v3": ["mowed", "mown"]
+            },
+            {
+                "v1": "swell",
+                "v2": ["swelled"],
+                "v3": ["swelled", "swollen"]
+            },
+            {
+                "v1": "sew",
+                "v2": ["sewed"],
+                "v3": ["sewed", "sewn"]
+            },
+            {
+                "v1": "shine (the shoes)",
+                "v2": ["shined"],
+                "v3": ["shined"]
+            },
+            {
+                "v1": "shine (brightly)",
+                "v2": ["shone"],
+                "v3": ["shone"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, no ending, V2=V3",
+        "verbs": [
+            {
+                "v1": "dig",
+                "v2": ["dug"],
+                "v3": ["dug"]
+            },
+            {
+                "v1": "stick",
+                "v2": ["stuck"],
+                "v3": ["stuck"]
+            },
+            {
+                "v1": "spin",
+                "v2": ["spun"],
+                "v3": ["spun"]
+            },
+            {
+                "v1": "sting",
+                "v2": ["stung"],
+                "v3": ["stung"]
+            },
+            {
+                "v1": "strike",
+                "v2": ["struck"],
+                "v3": ["struck"]
+            },
+            {
+                "v1": "swing",
+                "v2": ["swung"],
+                "v3": ["swung"]
+            },
+            {
+                "v1": "hang (a man)",
+                "v2": ["hanged"],
+                "v3": ["hanged"]
+            },
+            {
+                "v1": "hang (a picture)",
+                "v2": ["hung"],
+                "v3": ["hung"]
+            },
+            {
+                "v1": "slide",
+                "v2": ["slid"],
+                "v3": ["slid"]
+            },
+            {
+                "v1": "light",
+                "v2": ["lighted", "lit"],
+                "v3": ["lighted", "lit"]
+            },
+            {
+                "v1": "shoot",
+                "v2": ["shot"],
+                "v3": ["shot"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, no ending, V2=V3, vowel change pattern i - ou - ou",
+        "verbs": [
+            {
+                "v1": "bind",
+                "v2": ["bound"],
+                "v3": ["bound"]
+            },
+            {
+                "v1": "find",
+                "v2": ["found"],
+                "v3": ["found"]
+            },
+            {
+                "v1": "grind",
+                "v2": ["ground"],
+                "v3": ["ground"]
+            },
+            {
+                "v1": "wind",
+                "v2": ["wound"],
+                "v3": ["wound"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, no ending, V2=V3, vowel change pattern ee - e - e",
+        "verbs": [
+            {
+                "v1": "bleed",
+                "v2": ["bled"],
+                "v3": ["bled"]
+            },
+            {
+                "v1": "feed",
+                "v2": ["fed"],
+                "v3": ["fed"]
+            },
+            {
+                "v1": "flee",
+                "v2": ["fled"],
+                "v3": ["fled"]
+            },
+            {
+                "v1": "lead",
+                "v2": ["led"],
+                "v3": ["led"]
+            },
+            {
+                "v1": "speed",
+                "v2": ["speeded", "sped"],
+                "v3": ["speeded", "sped"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change pattern i - a - u",
+        "verbs": [
+            {
+                "v1": "begin",
+                "v2": ["began"],
+                "v3": ["begun"]
+            },
+            {
+                "v1": "drink",
+                "v2": ["drank"],
+                "v3": ["drunk"]
+            },
+            {
+                "v1": "ring",
+                "v2": ["rang"],
+                "v3": ["rung"]
+            },
+            {
+                "v1": "shrink",
+                "v2": ["shrank"],
+                "v3": ["shrunk"]
+            },
+            {
+                "v1": "sing",
+                "v2": ["sang"],
+                "v3": ["sung"]
+            },
+            {
+                "v1": "sink",
+                "v2": ["sank"],
+                "v3": ["sunk"]
+            },
+            {
+                "v1": "spin",
+                "v2": ["span", "spun"],
+                "v3": ["spun"]
+            },
+            {
+                "v1": "spring",
+                "v2": ["sprang"],
+                "v3": ["sprung"]
+            },
+            {
+                "v1": "swim",
+                "v2": ["swam"],
+                "v3": ["swum"]
+            }
+        ]
+    },
+    {
+        "name": "vowel change, V1=V3",
+        "verbs": [
+            {
+                "v1": "come",
+                "v2": ["came"],
+                "v3": ["come"]
+            },
+            {
+                "v1": "become",
+                "v2": ["became"],
+                "v3": ["become"]
+            },
+            {
+                "v1": "run",
+                "v2": ["ran"],
+                "v3": ["run"]
+            }
+        ]
+    },
+    {
+        "name": "miscellaneous",
+        "verbs": [
+            {
+                "v1": "to be",
+                "v2": ["was", "were"],
+                "v3": ["been"]
+            },
+            {
+                "v1": "go",
+                "v2": "went",
+                "v3": "gone"
+            },
+            {
+                "v1": "dive (jumped head first)",
+                "v2": "dove",
+                "v3": "dived"
+            },
+            {
+                "v1": "dive (scuba-diving)",
+                "v2": "dived",
+                "v3": "dived"
+            },
+            {
+                "v1": "do",
+                "v2": "did",
+                "v3": "done"
+            },
+            {
+                "v1": "can",
+                "v2": "could",
+                "v3": ""
+            },
+            {
+                "v1": "make",
+                "v2": "made",
+                "v3": "made"
+            },
+            {
+                "v1": "may",
+                "v2": "might",
+                "v3": ""
+            },
+            {
+                "v1": "have",
+                "v2": "had",
+                "v3": "had"
+            },
+            {
+                "v1": "hold",
+                "v2": "held",
+                "v3": "held"
+            },
+            {
+                "v1": "stand",
+                "v2": "stood",
+                "v3": "stood"
+            },
+            {
+                "v1": "understand",
+                "v2": "understood",
+                "v3": "understood"
+            },
+            {
+                "v1": "sit",
+                "v2": "sat",
+                "v3": "sat"
+            },
+            {
+                "v1": "babysit",
+                "v2": "babysat",
+                "v3": "babysat"
+            },
+            {
+                "v1": "win",
+                "v2": "won",
+                "v3": "won"
+            },
+            {
+                "v1": "lose",
+                "v2": "lost",
+                "v3": "lost"
+            }
+        ]
+    }
+]}
