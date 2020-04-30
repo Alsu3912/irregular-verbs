@@ -1,4 +1,4 @@
-import { flatten, Groups, VerbGroup, Verb } from './verb'
+import { flatten, Groups, VerbGroup, Verb, sort } from './verb'
 
 test("should return one verb when single group with only element", () => {
     const expected = createTestVerb();
@@ -29,12 +29,9 @@ test('should concatenate verbs from several groups', () => {
 test('should return sorted array', () => {
     let v1 = createTestVerb();
     let v2 = createTestVerb();
-    v2[0].v1 = "awake"
-    let testGroup = new TestGroups([
-        new TestVerbGroup("group_1", v1),
-        new TestVerbGroup("group_2", v2)]
-    );
-    expect(flatten(testGroup)).toStrictEqual(v2.concat(v1));
+    v2[0].v1 = "awake";
+    let testArray = v1.concat(v2);
+    expect(sort(testArray)).toStrictEqual(v2.concat(v1));
 });
 
 function createTestVerb(): Array<Verb> {

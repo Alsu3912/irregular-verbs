@@ -98,11 +98,6 @@
                 "v3": ["crept"]
             },
             {
-                "v1": "feed",
-                "v2": ["fed"],
-                "v3": ["fed"]
-            },
-            {
                 "v1": "feel",
                 "v2": ["felt"],
                 "v3": ["felt"]
@@ -116,11 +111,6 @@
                 "v1": "kneel",
                 "v2": ["knelt", "kneeled"],
                 "v3": ["knelt", "kneeled"]
-            },
-            {
-                "v1": "meet",
-                "v2": ["met"],
-                "v3": ["met"]
             },
             {
                 "v1": "sleep",
@@ -248,14 +238,14 @@
                 "v3": ["bet"]
             },
             {
-                "v1": "bid",
+                "v1": "bid (to offer)",
                 "v2": ["bid"],
                 "v3": ["bid"]
             },
             {
                 "v1": "broadcast",
                 "v2": ["broadcast", "broadcasted"],
-                "v3": ["bid"]
+                "v3": ["broadcast", "broadcasted"]
             },
             {
                 "v1": "burst",
@@ -428,7 +418,7 @@
                 "v3": ["forbidden"]
             },
             {
-                "v1": "bid",
+                "v1": "bid (to command, farewell)",
                 "v2": ["bade"],
                 "v3": ["bidden"]
             },
@@ -683,6 +673,11 @@
                 "v3": ["led"]
             },
             {
+                "v1": "meet",
+                "v2": ["met"],
+                "v3": ["met"]
+            },
+            {
                 "v1": "speed",
                 "v2": ["speeded", "sped"],
                 "v3": ["speeded", "sped"]
@@ -721,11 +716,6 @@
                 "v1": "sink",
                 "v2": ["sank"],
                 "v3": ["sunk"]
-            },
-            {
-                "v1": "spin",
-                "v2": ["span", "spun"],
-                "v3": ["spun"]
             },
             {
                 "v1": "spring",
@@ -769,78 +759,68 @@
             },
             {
                 "v1": "go",
-                "v2": "went",
-                "v3": "gone"
+                "v2": ["went"],
+                "v3": ["gone"]
             },
             {
                 "v1": "dive (jumped head first)",
-                "v2": "dove",
-                "v3": "dived"
+                "v2": ["dove"],
+                "v3": ["dived"]
             },
             {
                 "v1": "dive (scuba-diving)",
-                "v2": "dived",
-                "v3": "dived"
+                "v2": ["dived"],
+                "v3": ["dived"]
             },
             {
                 "v1": "do",
-                "v2": "did",
-                "v3": "done"
-            },
-            {
-                "v1": "can",
-                "v2": "could",
-                "v3": ""
+                "v2": ["did"],
+                "v3": ["done"]
             },
             {
                 "v1": "make",
-                "v2": "made",
-                "v3": "made"
-            },
-            {
-                "v1": "may",
-                "v2": "might",
-                "v3": ""
+                "v2": ["made"],
+                "v3": ["made"]
             },
             {
                 "v1": "have",
-                "v2": "had",
-                "v3": "had"
+                "v2": ["had"],
+                "v3": ["had"]
             },
             {
                 "v1": "hold",
-                "v2": "held",
-                "v3": "held"
+                "v2": ["held"],
+                "v3": ["held"]
             },
             {
                 "v1": "stand",
-                "v2": "stood",
-                "v3": "stood"
+                "v2": ["stood"],
+                "v3": ["stood"]
             },
             {
                 "v1": "understand",
-                "v2": "understood",
-                "v3": "understood"
+                "v2": ["understood"],
+                "v3": ["understood"]
             },
             {
                 "v1": "sit",
-                "v2": "sat",
-                "v3": "sat"
+                "v2": ["sat"],
+                "v3": ["sat"]
             },
             {
                 "v1": "babysit",
-                "v2": "babysat",
-                "v3": "babysat"
+                "v2": ["babysat"],
+                "v3": ["babysat"]
             },
             {
                 "v1": "win",
-                "v2": "won",
-                "v3": "won"
+                "v2": ["won"],
+                "v3": ["won"]
             },
             {
                 "v1": "lose",
-                "v2": "lost",
-                "v3": "lost"
+                "v2": ["lost"],
+                "v3": ["lost"]
             }
         ]
     }

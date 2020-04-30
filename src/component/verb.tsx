@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { readGroups, flatten, Groups, Verb, VerbGroup } from '../model/verb'
+import { readGroups, flatten, Verb } from '../model/verb'
 
 function VerbsTable(): JSX.Element {
     const [arrayOfVerbs, setArrayOfVerbs] = useState<Array<Verb>>(defaultArrayOfVerbs);
@@ -12,7 +12,7 @@ function VerbsTable(): JSX.Element {
                 setArrayOfVerbs(flattenVerbs);
             } catch (err) {
                 console.error(err);
-                throw new Error(err);
+                setArrayOfVerbs(defaultErrorTable);
             }
         }
         dataLoading();
@@ -58,6 +58,10 @@ function CreateRow(props: CreateRowProps) {
 
 const defaultArrayOfVerbs = [
     { v1: 'loading', v2: ['loading'], v3: ['loading'] }
+]
+
+const defaultErrorTable = [
+    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] }
 ]
 
 export default VerbsTable;

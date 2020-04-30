@@ -20,6 +20,9 @@ export async function readGroups(): Promise<Groups> {
 }
 
 export function flatten(group: Groups): Array<Verb> {
-    const verbs = group.groups.flatMap(g => g.verbs);
+    return  group.groups.flatMap(g => g.verbs);
+}
+
+export function sort(verbs: Array<Verb>): Array<Verb> {
     return verbs.sort((a: Verb, b: Verb) => a.v1.localeCompare(b.v1));
 }
