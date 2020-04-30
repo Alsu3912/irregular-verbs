@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should have a table of verbs 1`] = `null`;
+
+exports[`should have the default table 1`] = `
+<table
+  style={
+    Object {
+      "borderStyle": "solid",
+      "borderWidth": "1px",
+    }
+  }
+>
+  <thead>
+    <tr>
+      <th>
+        Base form
+      </th>
+      <th>
+        Simple past
+      </th>
+      <th>
+        Past participle
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+        loading
+      </th>
+      <th>
+        loading
+      </th>
+      <th>
+        loading
+      </th>
+    </tr>
+  </tbody>
+</table>
+`;
