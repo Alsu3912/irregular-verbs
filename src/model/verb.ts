@@ -14,9 +14,8 @@ export interface Groups {
 }
 
 export async function readGroups(): Promise<Groups> {
-    return fetch('./verbs.json')
-        .then(res => res.json())
-        .catch(err => {throw new Error(err)})  
+   let response = await fetch('./verbs.json');
+   return response.json();
 }
 
 export function flatten(group: Groups): Array<Verb> {
