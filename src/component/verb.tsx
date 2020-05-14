@@ -19,16 +19,18 @@ function VerbsTable(): JSX.Element {
     });
 
     return (
-        <table style={{ "borderWidth": "1px", 'borderStyle': 'solid' }} >
-            <thead>
-                <tr>
-                    <th>Base form</th>
-                    <th>Simple past</th>
-                    <th>Past participle</th>
-                </tr> 
-            </thead>
-            <CreateRow verbList={arrayOfVerbs} />
-        </table>
+        <div className='section'>
+            <table>
+                <thead>
+                    <tr>
+                        <th className="sticky-header">Base form</th>
+                        <th className="sticky-header">Simple past</th>
+                        <th className="sticky-header">Past participle</th>
+                    </tr>
+                </thead>
+                <CreateRow verbList={arrayOfVerbs} />
+            </table>
+        </div>
     );
 }
 
