@@ -4,7 +4,6 @@ import VerbsTable from './verb';
 function FrontPage(): JSX.Element {
     return (
         <div>
-            {/* <img src='./back.jpg' alt=""/> */}
             <div className='section1'>
                 <div className='inner'>
                     <section id="home-section" className="active">

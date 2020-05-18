@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { readGroups, flatten, Verb } from '../model/verb'
+import { readGroups, flatten, sort, Verb } from '../model/verb'
 
 function VerbsTable(): JSX.Element {
     const [arrayOfVerbs, setArrayOfVerbs] = useState<Array<Verb>>(defaultArrayOfVerbs);
@@ -8,7 +8,7 @@ function VerbsTable(): JSX.Element {
         async function dataLoading(): Promise<void> {
             try {
                 const verbsJson = await readGroups();
-                const flattenVerbs = flatten(verbsJson);
+                const flattenVerbs = sort(flatten(verbsJson));
                 setArrayOfVerbs(flattenVerbs);
             } catch (err) {
                 console.error(err);
