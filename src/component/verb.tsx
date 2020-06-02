@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { readGroups, flatten, sort, Verb } from '../model/verb'
+import { readGroups, flatten, sort, Verb } from '../model/verb';
+import CreateRow from '../component/createRow';
 
 function VerbsTable(): JSX.Element {
     const [arrayOfVerbs, setArrayOfVerbs] = useState<Array<Verb>>(defaultArrayOfVerbs);
@@ -34,35 +35,16 @@ function VerbsTable(): JSX.Element {
     );
 }
 
-interface CreateRowProps {
-    verbList: Verb[]
-}
-
-function CreateRow(props: CreateRowProps) {
-    return (
-        <tbody>
-            {props.verbList.map(verbsElement => (
-                <tr key={verbsElement.v1}>
-                    <th>
-                        {verbsElement.v1}
-                    </th>
-                    <th>
-                        {verbsElement.v2}
-                    </th>
-                    <th>
-                        {verbsElement.v3}
-                    </th>
-                </tr>
-            ))}
-        </tbody>
-    )
-}
-
 const defaultArrayOfVerbs = [
     { v1: 'loading', v2: ['loading'], v3: ['loading'] }
 ]
 
 const defaultErrorTable = [
+    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
+    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
+    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
+    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
+    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
     { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] }
 ]
 
