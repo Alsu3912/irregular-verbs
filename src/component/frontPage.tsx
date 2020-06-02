@@ -1,5 +1,4 @@
 import React from 'react';
-import VerbsTable from './verb';
 import GroupedVerbs from './groupedVerbs'
 
 function FrontPage(): JSX.Element {

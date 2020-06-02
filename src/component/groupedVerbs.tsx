@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { readGroups, sort, Verb, Groups } from '../model/verb'
+import { readGroups, Groups } from '../model/verb'
 import CreateRow from '../component/createRow';
 
 function GroupedVerbs(): JSX.Element {
