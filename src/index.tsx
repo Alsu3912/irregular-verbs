@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import VerbsTable from './component/verb'
+import FrontPage from './component/frontPage'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <VerbsTable />
+    <FrontPage />
   </React.StrictMode>,
   document.getElementById('root')
 );

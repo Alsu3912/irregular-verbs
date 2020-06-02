@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { readGroups, flatten, Verb } from '../model/verb'
+import { readGroups, flatten, sort, Verb } from '../model/verb'
 
 function VerbsTable(): JSX.Element {
     const [arrayOfVerbs, setArrayOfVerbs] = useState<Array<Verb>>(defaultArrayOfVerbs);
@@ -8,7 +8,7 @@ function VerbsTable(): JSX.Element {
         async function dataLoading(): Promise<void> {
             try {
                 const verbsJson = await readGroups();
-                const flattenVerbs = flatten(verbsJson);
+                const flattenVerbs = sort(flatten(verbsJson));
                 setArrayOfVerbs(flattenVerbs);
             } catch (err) {
                 console.error(err);
@@ -19,16 +19,18 @@ function VerbsTable(): JSX.Element {
     });
 
     return (
-        <table style={{ "borderWidth": "1px", 'borderStyle': 'solid' }} >
-            <thead>
-                <tr>
-                    <th>Base form</th>
-                    <th>Simple past</th>
-                    <th>Past participle</th>
-                </tr> 
-            </thead>
-            <CreateRow verbList={arrayOfVerbs} />
-        </table>
+        <div className='section'>
+            <table>
+                <thead>
+                    <tr>
+                        <th className="sticky-header">Base form</th>
+                        <th className="sticky-header">Simple past</th>
+                        <th className="sticky-header">Past participle</th>
+                    </tr>
+                </thead>
+                <CreateRow verbList={arrayOfVerbs} />
+            </table>
+        </div>
     );
 }
 
