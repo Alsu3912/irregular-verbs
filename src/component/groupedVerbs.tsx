@@ -30,8 +30,8 @@ function CreateGroupedTable(props: CreateGroupedTableProps) {
         <>
             {props.groups.groups.map(element => (
                 <div className='section'>
-                    <h3>{element.name}</h3>
                     <table>
+                        <caption>{element.name}</caption>
                         <thead>
                             <tr>
                                 <th className="sticky-header">Base form</th>
