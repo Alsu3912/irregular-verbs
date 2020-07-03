@@ -17,15 +17,15 @@ function GroupedVerbs(): JSX.Element {
         dataLoading();
     });
     return (
-        <CreateGroupedTable groups={groupsOfVerbs} />
+        <GroupedTable groups={groupsOfVerbs} />
     )
 }
 
-interface CreateGroupedTableProps {
+interface GroupedTableProps {
     groups: Groups
 }
 
-function CreateGroupedTable(props: CreateGroupedTableProps) {
+function GroupedTable(props: GroupedTableProps) {
     return (
         <>
             {props.groups.groups.map(element => (
