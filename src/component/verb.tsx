@@ -40,11 +40,6 @@ const defaultArrayOfVerbs = [
 ]
 
 const defaultErrorTable = [
-    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
-    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
-    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
-    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
-    { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] },
     { v1: 'failed to load', v2: ['failed to load'], v3: ['failed to load'] }
 ]
 
