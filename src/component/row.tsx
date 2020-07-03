@@ -23,6 +23,11 @@ function Row(props: RowProps) {
 
 const splitUpVerb = (arrayOfVerbs: string[]): JSX.Element => {
     let verbDescription = arrayOfVerbs.length > 1 ? arrayOfVerbs.join(" / ") : arrayOfVerbs[0];
+    if (!verbDescription) {
+        return (
+            <th></th>
+        )
+    }
     return (
         <th>
             {verbDescription}
