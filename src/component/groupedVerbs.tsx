@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { readGroups, Groups } from '../model/verb'
-import CreateRow from '../component/createRow';
+import Row from './row';
 
 function GroupedVerbs(): JSX.Element {
     const [groupsOfVerbs, setGroupsOfVerbs] = useState<Groups>(defaultGroupOfVerbs);
@@ -39,7 +39,7 @@ function CreateGroupedTable(props: CreateGroupedTableProps) {
                                 <th className="sticky-header">Past participle</th>
                             </tr>
                         </thead>
-                        <CreateRow verbList={element.verbs} />
+                        <Row verbList={element.verbs} />
                     </table>
                 </div>
             ))}

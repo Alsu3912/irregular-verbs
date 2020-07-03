@@ -1,11 +1,11 @@
 import React from 'react';
 import { Verb } from '../model/verb';
 
-interface CreateRowProps {
+interface RowProps {
     verbList: Verb[]
 };
 
-function CreateRow(props: CreateRowProps) {
+function Row(props: RowProps) {
     return (
         <tbody>
             {props.verbList.map(verbsElement => (
@@ -29,4 +29,4 @@ const splitUpVerb = (arrayOfVerbs: string[]): JSX.Element => {
         </th>
     )
 };
-export default CreateRow;
+export default Row;
