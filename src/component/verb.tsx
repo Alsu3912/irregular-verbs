@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { readGroups, flatten, sort, Verb } from '../model/verb'
+import { readGroups, flatten, sort, Verb } from '../model/verb';
+import Row from './row';
 
 function VerbsTable(): JSX.Element {
     const [arrayOfVerbs, setArrayOfVerbs] = useState<Array<Verb>>(defaultArrayOfVerbs);
@@ -28,34 +29,10 @@ function VerbsTable(): JSX.Element {
                         <th className="sticky-header">Past participle</th>
                     </tr>
                 </thead>
-                <CreateRow verbList={arrayOfVerbs} />
+                <Row verbList={arrayOfVerbs} />
             </table>
         </div>
     );
-}
-
-interface CreateRowProps {
-    verbList: Verb[]
-}
-
-function CreateRow(props: CreateRowProps) {
-    return (
-        <tbody>
-            {props.verbList.map(verbsElement => (
-                <tr key={verbsElement.v1}>
-                    <th>
-                        {verbsElement.v1}
-                    </th>
-                    <th>
-                        {verbsElement.v2}
-                    </th>
-                    <th>
-                        {verbsElement.v3}
-                    </th>
-                </tr>
-            ))}
-        </tbody>
-    )
 }
 
 const defaultArrayOfVerbs = [

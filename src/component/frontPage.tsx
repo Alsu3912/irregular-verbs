@@ -1,5 +1,5 @@
 import React from 'react';
-import VerbsTable from './verb';
+import GroupedVerbs from './groupedVerbs'
 
 function FrontPage(): JSX.Element {
     return (
@@ -16,7 +16,7 @@ function FrontPage(): JSX.Element {
                             </div>
                         </div>
                     </section>
-                    <VerbsTable />
+                    <GroupedVerbs />
                 </div>
             </div>
         </div>
