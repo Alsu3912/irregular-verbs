@@ -17,8 +17,9 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "sass-compile": "sass src/index.scss src/index.css",
+    "start": "sass src/index.scss src/index.css & react-scripts start",
+    "build": "sass src/index.scss src/index.css & react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
