@@ -7,9 +7,9 @@ function SiteHeader(): JSX.Element {
             <hr>
             </hr>
             <nav>
-                <a href="">main page</a>
-                <a href="">learning</a>
-                <a href="">training</a>
+                <a href="index.html">main page</a>
+                <a href="index.html">learning</a>
+                <a href="index.html">training</a>
             </nav>
         </div>
     )

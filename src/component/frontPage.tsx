@@ -8,7 +8,7 @@ function FrontPage(): JSX.Element {
         <div>
             <section className="section1">
                 <SiteHeader />
-                <img src="pic.png" alt="Photo by Estée Janssens on Unsplash" />
+                <img src="frontPagePic.png" alt="by Estée Janssens on Unsplash" />
                 
             </section>
             <section className="section2">
