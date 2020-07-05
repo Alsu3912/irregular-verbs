@@ -1,24 +1,31 @@
 import React from 'react';
-import GroupedVerbs from './groupedVerbs'
+import SiteHeader from './siteHeader';
+import VerbsTable from './verb';
+
 
 function FrontPage(): JSX.Element {
     return (
         <div>
-            <div className='section1'>
-                <div className='inner'>
-                    <section id="home-section" className="active">
-                        <div id="columns03" className="container default">
-                            <div className='inner'>
-                                <div id="image03" className="image"><img src="./image03.png" alt=""/></div>
-                                <h1 id="text03">irregular verbs</h1>
-                                <hr id="divider04"></hr>
-                                <p id="text09">Learn and train irregular verbs</p>
-                            </div>
-                        </div>
-                    </section>
-                    <GroupedVerbs />
+            <section className="section1">
+                <SiteHeader />
+                <img src="frontPagePic.png" alt="by Estée Janssens on Unsplash" />
+                
+            </section>
+            <section className="section2">
+                <div className="content1">
+                    <h1>Do you want to learn irregular verbs?</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic
+                    officia, deserunt illo id suscipit rerum!
+                    Nesciunt repellendus corrupti quaerat, voluptate esse, nisi consequuntur vero vel tempora, similique
+                    dicta
+                    temporibus quo.
+            </p>
+                    <button>start learning</button>
                 </div>
-            </div>
+                <div>
+                    <VerbsTable />
+                </div>
+            </section>
         </div>
     )
 }
