@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 function SiteHeader(): JSX.Element {
     return (
@@ -7,9 +8,9 @@ function SiteHeader(): JSX.Element {
             <hr>
             </hr>
             <nav>
-                <a href="index.html">main page</a>
-                <a href="index.html">learning</a>
-                <a href="index.html">training</a>
+                <Link to="/">main</Link>
+                <Link to="/learning">learning</Link>
+                <Link to="/training">training</Link>
             </nav>
         </div>
     )

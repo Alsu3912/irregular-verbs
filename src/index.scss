@@ -48,6 +48,9 @@ nav {
         margin-left: 30px;
         margin-right: 30px;
     }
+    a:link {
+        color: black;
+    }
     a:hover {
         text-decoration: underline;
     }
@@ -62,6 +65,7 @@ img {
 }
 
 table {
+    table-layout: fixed;
     margin: 0 auto;
     width: $main-width;
     border-collapse: collapse; 
@@ -81,6 +85,7 @@ table {
 
     th,
     td {
+        overflow: hidden;
         border: $border-blue-solid;
         padding: 5px;
     }
