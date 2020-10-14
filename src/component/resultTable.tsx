@@ -1,9 +1,10 @@
 import React from 'react';
-import { Verb } from '../model/verb';
+import { Verb, verbComparison } from '../model/verb';
+import {AnswerPair} from './trainingPage';
 
 type ResultTableProps = {
     verbList: Verb[];
-    answerList: Array<Array<string>>;
+    answerList: Array<AnswerPair>;
 };
 
 type RowResultProps = ResultTableProps & {
@@ -11,7 +12,7 @@ type RowResultProps = ResultTableProps & {
 }
 
 function Correct(properVerb: string[], answerVerb: string): JSX.Element {
-    if (properVerb[0] === answerVerb || properVerb[1] === answerVerb) {
+    if (verbComparison(properVerb[0], answerVerb) || verbComparison(properVerb[1], answerVerb)) {
         return (
             <th>
                 {answerVerb}
@@ -35,8 +36,8 @@ function RowResult(props: RowResultProps): JSX.Element {
     return (
         <tr key={props.verbList[props.loop].v1}>
             <th>{props.verbList[props.loop].v1}</th>
-            {Correct(props.verbList[props.loop].v2, props.answerList[props.loop][0])}
-            {Correct(props.verbList[props.loop].v3, props.answerList[props.loop][1])}
+            {Correct(props.verbList[props.loop].v2, props.answerList[props.loop].v2)}
+            {Correct(props.verbList[props.loop].v3, props.answerList[props.loop].v3)}
         </tr>
     )
 }

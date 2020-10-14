@@ -5,8 +5,17 @@ import { Verb } from '../model/verb';
 import QuestionCard from './questionCard';
 import ResultTable from './resultTable';
 
-const arrayAnswers: string[][] = [];
+const arrayAnswers: Array<AnswerPair> = [];
 const totalSteps = 10;
+
+export class AnswerPair {
+    v2: string;
+    v3: string;
+    constructor(SimplePast: string, PastParticiple: string) {
+        this.v2 = SimplePast;
+        this.v3 = PastParticiple;
+    }
+}
 
 function TrainingPage(): JSX.Element {
     const [loading, setLoading] = useState(false);
@@ -45,17 +54,35 @@ function TrainingPage(): JSX.Element {
             setGameOver(true);
         } else {
             setQuestionNr(nextQ);
-            arrayAnswers.push([userAnswerV2, userAnswerV3]);
+            arrayAnswers.push(new AnswerPair(userAnswerV2, userAnswerV3));
             setUserAnswerV2('');
             setUserAnswerV3('');
         }
     };
 
     const checkAnswer = () => {
-        arrayAnswers.push([userAnswerV2, userAnswerV3]);
+        arrayAnswers.push(new AnswerPair(userAnswerV2, userAnswerV3));
         setAnswersRecorded(true);
         setUserAnswerV2('');
         setUserAnswerV3('');
+    };
+
+    const isNotLastQuestion = (): Boolean => {
+        if (!gameOver && !loading && questionNr !== totalQuestions - 1) {
+            return true;
+        } else return false;
+    };
+
+    const quizInProgress = (): Boolean => {
+        if (!loading && !gameOver && !answersRecorded) {
+            return true;
+        } else return false;
+    };
+
+    const isLastNotRecordedQuestion = (): Boolean => {
+        if (!loading && questionNr === totalQuestions - 1 && !answersRecorded) {
+            return true;
+        } else return false;
     };
 
     return (
@@ -69,17 +96,17 @@ function TrainingPage(): JSX.Element {
 
             {loading && <p>Loading ...</p>}
 
-            {!loading && !gameOver && !answersRecorded && (
-                <QuestionCard questions={questions} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
+            {quizInProgress() && (
+                <QuestionCard questions={questions[questionNr]} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
             )}
 
-            {!gameOver && !loading && questionNr !== totalQuestions - 1 ? (
+            {isNotLastQuestion() ? (
                 <button className='next' onClick={nextQuestion}>
                     Next question
                 </button>
             ) : null}
 
-            {!loading && questionNr === totalQuestions - 1 && !answersRecorded ? (
+            {isLastNotRecordedQuestion() ? (
                 <button className='result' onClick={checkAnswer}>Result</button>
             ) : null}
 
