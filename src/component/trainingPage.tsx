@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SiteHeader from './siteHeader';
-import { fetchVerbs } from './fetchVerbs';
+import { fetchVerbs } from '../model/verb';
 import { Verb } from '../model/verb';
 import QuestionCard from './questionCard';
 import ResultTable from './resultTable';
@@ -68,21 +68,15 @@ function TrainingPage(): JSX.Element {
     };
 
     const isNotLastQuestion = (): Boolean => {
-        if (!gameOver && !loading && questionNr !== totalQuestions - 1) {
-            return true;
-        } else return false;
+        return !gameOver && !loading && questionNr !== totalQuestions - 1;
     };
 
     const quizInProgress = (): Boolean => {
-        if (!loading && !gameOver && !answersRecorded) {
-            return true;
-        } else return false;
+        return !loading && !gameOver && !answersRecorded;
     };
 
     const isLastNotRecordedQuestion = (): Boolean => {
-        if (!loading && questionNr === totalQuestions - 1 && !answersRecorded) {
-            return true;
-        } else return false;
+        return !loading && questionNr === totalQuestions - 1 && !answersRecorded;
     };
 
     return (
@@ -97,7 +91,7 @@ function TrainingPage(): JSX.Element {
             {loading && <p>Loading ...</p>}
 
             {quizInProgress() && (
-                <QuestionCard questions={questions[questionNr]} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
+                <QuestionCard question={questions[questionNr]} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
             )}
 
             {isNotLastQuestion() ? (

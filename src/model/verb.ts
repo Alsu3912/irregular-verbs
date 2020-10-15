@@ -45,3 +45,9 @@ export const verbComparison = (correctAnswer: string, givenAnswer: string): Bool
         return true;
     } else return false;
 };
+
+export const fetchVerbs = async () => {
+    const data = await readGroups();
+    const flattenVerbs = flatten(data);
+    return shuffleArray(flattenVerbs);
+};
