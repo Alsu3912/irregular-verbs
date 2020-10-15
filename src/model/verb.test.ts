@@ -1,4 +1,4 @@
-import { flatten, Groups, VerbGroup, Verb, sort } from './verb'
+import { flatten, Groups, VerbGroup, Verb, sort, shuffleArray, verbComparison } from './verb'
 
 test("should return one verb when single group with only element", () => {
     const expected = createTestVerb();
@@ -56,3 +56,41 @@ class TestGroups implements Groups {
         this.groups = groups;
     }
 }
+
+test('should return true when given answer is correct', () => {
+    expect(verbComparison("took", "took")).toBeTruthy();
+});
+
+test('should return true when given answer in uppercase', () => {
+    expect(verbComparison("took", "TOOK")).toBeTruthy();
+});
+
+test('should return true when given answer contains spaces', () => {
+    expect(verbComparison("took","   took ")).toBeTruthy();
+});
+
+test('should return true when given answer in uppercase and contains spaces', () => {
+    expect(verbComparison("took"," Took  ")).toBeTruthy();
+});
+
+test('should return false when given answer is empty', () => {
+    expect(verbComparison("took","")).toBeFalsy();
+});
+
+test('should return false when given answer is empty (filled with spaces)', () => {
+    expect(verbComparison("took","   ")).toBeFalsy();
+});
+
+test('should have the same length after shuffle', () => {
+    const myArray = [45, 64, "r", 0];
+    const shuffledArray = shuffleArray(myArray);
+    expect(myArray.length).toBe(shuffledArray.length);
+});
+
+test('should work in case of empty array', () => {
+    expect(shuffleArray([])).toStrictEqual([]);
+});
+
+test('should work in case of one element in an array', () => {
+    expect(shuffleArray([1])).toStrictEqual([1]);
+});
