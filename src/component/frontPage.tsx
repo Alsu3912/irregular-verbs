@@ -8,7 +8,6 @@ function FrontPage(): JSX.Element {
         <div>
             <section className="section1">
                 <SiteHeader />
-                <img src="frontPagePic.png" alt="by Estée Janssens on Unsplash" />
                 
             </section>
             <section className="section2">
@@ -25,6 +24,7 @@ function FrontPage(): JSX.Element {
                 <div>
                     <VerbsTable />
                 </div>
+                <div className="footer"></div>
             </section>
         </div>
     )

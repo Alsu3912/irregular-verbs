@@ -14,13 +14,13 @@ type RowResultProps = ResultTableProps & {
 function Correct(properVerb: string[], answerVerb: string): JSX.Element {
     if (verbComparison(properVerb[0], answerVerb) || verbComparison(properVerb[1], answerVerb)) {
         return (
-            <th>
+            <th className="correct">
                 {answerVerb}
             </th>
         );
     } else {
         return (
-            <th>
+            <th className="wrong">
                 {properVerb.join(" or ")}<br />
                 {answerVerb.length === 0 ? (
                     <p><i>no answer was provided</i></p>
@@ -53,9 +53,9 @@ function ResultTable(props: ResultTableProps): JSX.Element {
             <table>
                 <thead key="thead">
                     <tr key="title">
-                        <th>Base form</th>
-                        <th>Simple past</th>
-                        <th>Past participle</th>
+                        <th className="sticky-header">Base form</th>
+                        <th className="sticky-header">Simple past</th>
+                        <th className="sticky-header">Past participle</th>
                     </tr>
                 </thead>
                 <tbody key="tbody">

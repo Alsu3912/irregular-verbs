@@ -17,7 +17,7 @@ function QuestionCard(props: QProps): JSX.Element {
             <p className='number'>
                 Question: {props.questionNr + 1} / {props.totalQuestions}
             </p>
-            <p>{props.question.v1}</p>
+            <p className="verb">{props.question.v1}</p>
             <p><input type="text" name="V2" placeholder="Simple past" onChange={props.callbackV2} value={props.userAnswerV2} /></p>
             <p><input type="text" name="V3" placeholder="Past participle" onChange={props.callbackV3} value={props.userAnswerV3} /></p>
         </div>

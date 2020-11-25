@@ -84,11 +84,11 @@ function TrainingPage(): JSX.Element {
             <SiteHeader />
             {gameOver ? (
                 <button className='start' onClick={start}>
-                    Start
+                    start
                 </button>
             ) : null}
 
-            {loading && <p>Loading ...</p>}
+            {loading && <p className='loading'>Loading ...</p>}
 
             {quizInProgress() && (
                 <QuestionCard question={questions[questionNr]} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
@@ -106,7 +106,7 @@ function TrainingPage(): JSX.Element {
 
             {answersRecorded && (
                 <div>
-                    <button className='start_over' onClick={start}>Start over</button>
+                    <button className='start-over' onClick={start}>Start over</button>
                     <ResultTable verbList={questions} answerList={arrayAnswers} />
                 </div>
             )}
