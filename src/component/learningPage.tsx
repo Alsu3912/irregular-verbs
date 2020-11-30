@@ -7,6 +7,7 @@ function LearningPage(): JSX.Element {
         <div>
             <SiteHeader />
             <GroupedVerbs />
+            <div className="footer"></div>
         </div>
     )
 }
