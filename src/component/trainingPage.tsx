@@ -82,34 +82,38 @@ function TrainingPage(): JSX.Element {
     return (
         <div>
             <SiteHeader />
-            {gameOver ? (
-                <button className='start' onClick={start}>
-                    Start
-                </button>
-            ) : null}
+            <section className="content1">
+                {gameOver ? (
+                    <button onClick={start}>
+                        start
+                    </button>
+                ) : null}
 
-            {loading && <p>Loading ...</p>}
+                {loading && <p className='loading'>Loading ...</p>}
 
-            {quizInProgress() && (
-                <QuestionCard question={questions[questionNr]} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
-            )}
+                {quizInProgress() && (
+                    <QuestionCard question={questions[questionNr]} callbackV2={handleChangeV2} callbackV3={handleChangeV3} userAnswerV2={userAnswerV2} userAnswerV3={userAnswerV3} questionNr={questionNr} totalQuestions={totalQuestions} />
+                )}
 
-            {isNotLastQuestion() ? (
-                <button className='next' onClick={nextQuestion}>
-                    Next question
-                </button>
-            ) : null}
+                {isNotLastQuestion() ? (
+                    <button className='next' onClick={nextQuestion}>
+                        Next question
+                    </button>
+                ) : null}
 
-            {isLastNotRecordedQuestion() ? (
-                <button className='result' onClick={checkAnswer}>Result</button>
-            ) : null}
-
+                {isLastNotRecordedQuestion() ? (
+                    <button className='result' onClick={checkAnswer}>Result</button>
+                ) : null}
+            </section>
             {answersRecorded && (
                 <div>
-                    <button className='start_over' onClick={start}>Start over</button>
+                    <section className="content1">
+                        <button className='start-over' onClick={start}>Start over</button>
+                    </section>
                     <ResultTable verbList={questions} answerList={arrayAnswers} />
                 </div>
             )}
+            <div className="footer"></div>
         </div>
     )
 }
