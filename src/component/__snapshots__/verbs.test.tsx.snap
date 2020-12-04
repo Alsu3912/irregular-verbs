@@ -41,47 +41,6 @@ exports[`should have a table of verbs 1`] = `
 </div>
 `;
 
-exports[`should have a table of verbs 2`] = `
-<div
-  className="section"
->
-  <table>
-    <thead>
-      <tr>
-        <th
-          className="sticky-header"
-        >
-          Base form
-        </th>
-        <th
-          className="sticky-header"
-        >
-          Simple past
-        </th>
-        <th
-          className="sticky-header"
-        >
-          Past participle
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>
-          loading
-        </th>
-        <th>
-          loading
-        </th>
-        <th>
-          loading
-        </th>
-      </tr>
-    </tbody>
-  </table>
-</div>
-`;
-
 exports[`should have the default table 1`] = `
 <div
   className="section"
