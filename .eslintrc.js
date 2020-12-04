@@ -30,6 +30,10 @@ module.exports = {
     },
     rules: {
         'linebreak-style': 'off',
+        "@typescript-eslint/camelcase": "off",
+        "max-classes-per-file": ["error", 2],
+        'no-console': 'off',
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
         'prettier/prettier': [
             'error',
             {

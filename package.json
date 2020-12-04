@@ -20,12 +20,12 @@
   },
   "scripts": {
     "sass-compile": "node-sass src/index.scss src/index.css",
-    "start": "yarn sass-compile & react-scripts start",
-    "build": "yarn sass-compile & react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "start": "yarn lint & yarn sass-compile & react-scripts start",
+    "build": "yarn lint & yarn sass-compile & react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
