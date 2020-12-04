@@ -16,17 +16,25 @@ function VerbsTable(): JSX.Element {
   );
 
   useEffect(() => {
+    let mounted = true;
     async function dataLoading(): Promise<void> {
       try {
         const verbsJson = await readGroups();
         const flattenVerbs = sort(flatten(verbsJson));
-        setArrayOfVerbs(flattenVerbs);
+        if (mounted) {
+          setArrayOfVerbs(flattenVerbs);
+        }
       } catch (err) {
         console.error(err);
-        setArrayOfVerbs(defaultErrorTable);
+        if (mounted) {
+          setArrayOfVerbs(defaultErrorTable);
+        }
       }
     }
     dataLoading();
+    return (): void => {
+      mounted = false;
+    };
   });
 
   return (

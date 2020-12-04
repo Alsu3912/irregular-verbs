@@ -37,11 +37,11 @@ function GroupedTable(props: GroupedTableProps) {
   return (
     <>
       {verbsJson.groups.map((element) => (
-        <div className="section">
+        <div key={element.name} className="section">
           <table>
             <caption>{element.name}</caption>
-            <thead>
-              <tr>
+            <thead key="thead">
+              <tr key="title">
                 <th className="sticky-header">Base form</th>
                 <th className="sticky-header">Simple past</th>
                 <th className="sticky-header">Past participle</th>
@@ -60,16 +60,24 @@ function GroupedVerbs(): JSX.Element {
     defaultGroupOfVerbs
   );
   useEffect(() => {
+    let mounted = true;
     async function dataLoading(): Promise<void> {
       try {
         const verbsJson = await readGroups();
-        setGroupsOfVerbs(verbsJson);
+        if (mounted) {
+          setGroupsOfVerbs(verbsJson);
+        }
       } catch (err) {
         console.error(err);
-        setGroupsOfVerbs(defaultErrorGroup);
+        if (mounted) {
+          setGroupsOfVerbs(defaultErrorGroup);
+        }
       }
     }
     dataLoading();
+    return (): void => {
+      mounted = false;
+    };
   });
   return <GroupedTable verbsJson={groupsOfVerbs} />;
 }
