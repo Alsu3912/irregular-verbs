@@ -12,7 +12,7 @@ ReactDOM.render(
       <Route exact path="/" component={FrontPage} />
       <Route exact path="/learning" component={LearningPage} />
       <Route exact path="/training" component={TrainingPage} />
-    </Switch >
-  </Router >,
-  document.getElementById('root')
+    </Switch>
+  </Router>,
+  document.getElementById("root")
 );

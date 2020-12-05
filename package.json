@@ -20,8 +20,8 @@
   },
   "scripts": {
     "sass-compile": "node-sass src/index.scss src/index.css",
-    "format": "prettier --write src/**/*.ts{,x}",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "format": "prettier --write src/**/*.ts{,x} src/*.ts{,x}",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} src/*.ts{,x}",
     "start": "yarn lint & yarn sass-compile & react-scripts start",
     "build": "yarn lint & yarn sass-compile & react-scripts build",
     "test": "react-scripts test",
