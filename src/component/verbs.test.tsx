@@ -1,21 +1,20 @@
-import React, {useEffect} from 'react';
-import VerbsTable from './verb';
-import renderer, {act} from 'react-test-renderer';
+import React from "react";
+import renderer, { act, ReactTestRenderer } from "react-test-renderer";
+import VerbsTable from "./verb";
 
-test('should have the default table', () => {
-    const component = renderer.create(<VerbsTable />);
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+test("should have the default table", () => {
+  const component = renderer.create(<VerbsTable />);
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 });
 
-test('should have a table of verbs', () => {
-    let wrapper: any;
-    act(() => {
-        wrapper = renderer.create(<VerbsTable />);
-    });
-    act(() => {
-        wrapper.update();
-    })
-    const x = wrapper.toJSON();
-    expect(x).toMatchSnapshot();
+test("should have a table of verbs", () => {
+  let wrapper: ReactTestRenderer;
+  act(() => {
+    wrapper = renderer.create(<VerbsTable />);
+  });
+  act(() => {
+    wrapper.update(<VerbsTable />);
+    expect(wrapper.toJSON()).toMatchSnapshot();
+  });
 });

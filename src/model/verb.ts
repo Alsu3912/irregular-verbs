@@ -1,53 +1,59 @@
 export interface Verb {
-    v1: string;
-    v2: Array<string>;
-    v3: Array<string>;
+  v1: string;
+  v2: Array<string>;
+  v3: Array<string>;
 }
 
 export interface VerbGroup {
-    name: string;
-    verbs: Array<Verb>
+  name: string;
+  verbs: Array<Verb>;
 }
 
 export interface Groups {
-    groups: Array<VerbGroup>
+  groups: Array<VerbGroup>;
 }
 
 export async function readGroups(): Promise<Groups> {
-    let response = await fetch('./verbs.json');
-    return response.json();
+  const response = await fetch("./verbs.json");
+  return response.json();
 }
 
-export function flatten(group: Groups): Array<Verb> {
-    return group.groups.flatMap(g => g.verbs);
+export function flatten(verbsJson: Groups): Array<Verb> {
+  return verbsJson.groups.flatMap((g) => g.verbs);
 }
 
 export function sort(verbs: Array<Verb>): Array<Verb> {
-    return verbs.sort((a: Verb, b: Verb) => a.v1.localeCompare(b.v1));
+  return verbs.sort((a: Verb, b: Verb) => a.v1.localeCompare(b.v1));
 }
 
-export function shuffleArray(array: Array<any>) {
-    let currentIndex = array.length;
-    let temporaryValue: any;
-    let randomIndex: number;
-    while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-    };
-    return array;
+export function shuffleArray(array: Verb[]): Verb[] {
+  let currentIndex = array.length;
+  let temporaryValue: Verb;
+  let randomIndex: number;
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    /* eslint-disable no-param-reassign */
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+    /* eslint-disable no-param-reassign */
+  }
+  return array;
+}
+
+export const verbComparison = (
+  correctAnswer: string,
+  givenAnswer: string
+): boolean => {
+  if (correctAnswer === givenAnswer.toLowerCase().trim()) {
+    return true;
+  }
+  return false;
 };
 
-export const verbComparison = (correctAnswer: string, givenAnswer: string): Boolean => {
-    if (correctAnswer === givenAnswer.toLowerCase().trim()) {
-        return true;
-    } else return false;
-};
-
-export const fetchVerbs = async () => {
-    const data = await readGroups();
-    const flattenVerbs = flatten(data);
-    return shuffleArray(flattenVerbs);
+export const fetchVerbs = async (): Promise<Verb[]> => {
+  const data = await readGroups();
+  const flattenVerbs = flatten(data);
+  return shuffleArray(flattenVerbs);
 };
